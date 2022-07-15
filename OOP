@@ -1,0 +1,95 @@
+#include <iostream>
+#include <iostream>
+//This a school cafteria system created by peter kipruto
+int main() {
+    int meal;int mealQty;int drinks;
+    int drinksQty;
+    double Fishrice = 500.00;
+    double beefugali = 150.00;
+    double chickenchapati = 300;
+    double AmountOfSaleFishrice = 0;
+    double AmountOfSalebeefugali = 0;
+    double AmountOfSalechickenchapati = 0;
+    double fruitjuice = 100.00;
+    double soda = 50.00;
+    double lemonwater = 40.00;
+    double tea = 30.00;
+    double AmountOfSaleFruitjuice = 0;
+    double AmountOfSaleSoda = 0;
+    double AmountOfSaleLemonwater = 0;
+    double AmountOfSaleTea = 0;
+    double cash;
+    double total = 0;
+    
+    std::cout<<"\n\t WELCOME TO ZETECH RESTARAUNT\t\n\n";
+    std::cout<<"[1] fishrice....php 500.00\n [2] beefugali....php 150.00\n [3] chickenchapati....php 300.00\n\n";
+    std::cout<<"What is your meal: ";
+    std::cin>>meal;
+    std::cout<<"How many?: ";
+    std::cin>>mealQty;
+    
+    std::cout<<"\t\t =Drinks= \t\t\n\n";
+     std::cout<<"[1] fruitjuice....php 100.00\n [2] soda....php 50.00\n [3] lemonwater....php 40.00\n [4] Tea....php 30.00\n\n";
+    std::cout<<"what is your drinks: ";
+    std::cout<<"How many?: ";
+    std::cin>>drinksQty;
+    
+    std::cout<<"\n\t  =Item ordered=\t\t\n\n";
+    
+    
+    switch (meal)
+    {
+        case 1:
+        std::cout<<"Fishrice....php 500.00 X "<<mealQty<<" = "<<mealQty * Fishrice<<"\n";
+        AmountOfSaleFishrice = mealQty * Fishrice;
+        break;
+      
+      
+      case 2:
+        std::cout<<"beefugali....php 150.00 X "<<mealQty<<" = "<<mealQty * beefugali<<"\n";
+        AmountOfSalebeefugali = mealQty * beefugali;
+        break;
+        
+        case 3:
+        std::cout<<"chickenchapati....php 300.00 X "<<mealQty<<" = "<<mealQty * chickenchapati<<"\n";
+        AmountOfSalechickenchapati = mealQty * chickenchapati;
+        break;
+         }
+
+switch (drinks)
+{
+    case 1:
+    std::cout<<"fruitjuice...php 100.00 X "<<drinksQty<<" = "<<drinksQty * fruitjuice<<"\n";
+        AmountOfSaleFruitjuice = drinksQty * fruitjuice;
+        break;
+        
+        case 2:
+    std::cout<<"Soda...php 50.00 X "<<drinksQty<<" = "<<drinksQty * soda<<"\n";
+        AmountOfSaleSoda = drinksQty * soda;
+        break;
+        
+        case 3:
+    std::cout<<"lemonwater...php 40.00 X "<<drinksQty<<" = "<<drinksQty * lemonwater<<"\n";
+        AmountOfSaleLemonwater = drinksQty * lemonwater;
+        break;
+        
+        case 4:
+    std::cout<<"Tea...php 100.00 X "<<drinksQty<<" = "<<drinksQty * tea<<"\n";
+        AmountOfSaleTea = drinksQty * tea;
+        break;      
+}
+
+total = 0;
+total = total + AmountOfSaleFishrice + AmountOfSalebeefugali + AmountOfSaleFishrice + AmountOfSalechickenchapati + AmountOfSaleFruitjuice + AmountOfSaleSoda + AmountOfSaleLemonwater + AmountOfSaleTea;
+std::cout<<"Total Amount is: " <<total<<"\n";
+std::cout<<"cash: ";
+std::cin>>cash;
+std::cout<<"Change: "<< cash - total<<"\n\n";
+
+std::cout<<"ENJOY YOUR MEAL!\n\n\n ";
+std::cout<<"\n\n\t............\n";
+std::cout<<"\t written by josh";
+std::cout<<"\t...........\n";
+
+    return 0;
+}
